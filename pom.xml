@@ -14,7 +14,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <exec.mainClass>za.co.iie.chatapp.ChatApp</exec.mainClass>
+    <exec.mainClass>ChatApp</exec.mainClass>
   </properties>
 
   <dependencies>
@@ -28,6 +28,9 @@
   </dependencies>
 
   <build>
+    <!-- I point Maven directly to src/ and test/ so I don't need deep nested package folders. -->
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
     <plugins>
       <!-- Surefire runs my JUnit tests during "mvn test". -->
       <plugin>
